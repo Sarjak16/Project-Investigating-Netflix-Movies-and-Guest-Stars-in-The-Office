@@ -76,3 +76,20 @@ short_movies = netflix_movies_col_subset[netflix_movies_col_subset['duration'] <
 # Print the first 20 rows of short_movies
 print(short_movies[0:20])
 
+#8. Marking non-feature films
+# Define an empty list
+colors = []
+
+# Iterate over rows of netflix_movies_col_subset
+for lab, row in netflix_movies_col_subset.iterrows() :
+    if row['genre']=="Children" :
+        colors.append("red")
+    elif row['genre']== "Documentaries" :
+        colors.append("blue")
+    elif row['genre']=="Stand-Up" :
+        colors.append("green")
+    else:
+        colors.append("black")
+        
+# Inspect the first 10 values in your list        
+colors[0:10]
