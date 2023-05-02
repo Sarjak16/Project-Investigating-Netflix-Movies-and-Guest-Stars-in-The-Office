@@ -20,3 +20,19 @@ durations_df = pd.DataFrame(movie_dict)
 
 # Print the DataFrame
 print(durations_df)
+
+#3. A visual inspection of our data
+
+# Import matplotlib.pyplot under its usual alias and create a figure
+import matplotlib.pyplot as plt
+fig = plt.figure()
+
+# Draw a line plot of release_years and durations
+plt.plot(durations_df['years'], durations_df['durations'])
+
+# Create a title
+plt.title("Netflix Movie Durations 2011-2020")
+
+# Show the plot
+plt.show()
+
